@@ -1,0 +1,40 @@
+String algorithms are fundamental to many areas of computer science and are essential in text processing, bioinformatics, search engines, data compression, and more. Here are some commonly used string algorithms:
+
+1. String Matching Algorithms
+Naive String Matching: A straightforward approach that checks for a pattern at every position in the text.
+Knuth-Morris-Pratt (KMP): Uses a partial match table to avoid unnecessary comparisons, achieving O(n + m) time complexity for matching a pattern of length m in a text of length n.
+Rabin-Karp: Uses hashing for pattern matching, allowing average-case O(n + m) time complexity. Particularly useful for multiple pattern matching.
+Boyer-Moore: Efficient for large alphabets, using heuristics to skip sections of the text, giving O(n/m) performance on average.
+2. Longest Common Subsequence (LCS)
+Finds the longest sequence that appears in the same order in two strings. Used in diff tools, bioinformatics, and comparing document similarity. Often solved with dynamic programming in O(m * n) time for strings of lengths m and n.
+3. Longest Common Substring
+Unlike LCS, this finds the longest contiguous segment common to two strings. A dynamic programming approach takes O(m * n) time; however, suffix trees or arrays can reduce this to linear time for multiple queries.
+4. Longest Palindromic Substring
+Expand Around Center: O(n^2) approach by expanding around each possible center.
+Manacher’s Algorithm: Finds the longest palindromic substring in O(n) time, using a unique array to store palindromic radius lengths.
+5. Suffix Arrays and Suffix Trees
+Suffix Array: An array of sorted suffixes of a string, used in string searching, substring problems, and LCP array construction.
+Suffix Tree: A compressed trie of all suffixes, allowing pattern searching, LCS, and substring queries in O(m) time for patterns of length m.
+6. Z Algorithm
+Computes the Z-array where each entry is the length of the longest substring starting from that position that matches the prefix. Useful for pattern matching and string analysis in O(n) time.
+7. Aho-Corasick Algorithm
+Builds a trie and failure links for multiple pattern matching in O(n + m + z) time, where n is the text length, m is the total pattern length, and z is the number of matches.
+8. Edit Distance (Levenshtein Distance)
+Measures the minimum number of operations (insertions, deletions, substitutions) required to change one string into another. Dynamic programming offers an O(m * n) solution, while optimized versions exist for restricted cases.
+9. Tries (Prefix Trees)
+A trie is a tree structure used to store a dynamic set of strings, where each node represents a common prefix. Efficient for autocomplete and prefix-based searches.
+10. Burrows-Wheeler Transform (BWT)
+A data compression technique that rearranges a string into runs of similar characters, often paired with Move-To-Front encoding and Huffman coding. Efficient in data compression tools.
+11. Pattern Matching with Wildcards
+Dynamic programming or backtracking approaches allow handling patterns with wildcard characters like ? and *. Used in filename matching, regex engines, etc.
+12. Regular Expression Matching
+Can be implemented using a finite automaton or backtracking, where patterns may include character classes, repetitions, and alternations, suitable for parsing and validating text.
+13. Rolling Hashes
+A hash function is applied to substrings, allowing O(1) hash updates as the window slides over the text. Used in Rabin-Karp, substring search, and plagiarism detection.
+These algorithms cover a wide range of applications and are essential in optimizing tasks involving large text data or complex pattern matching needs. Each approach provides specific advantages depending on the string structure, size, and the type of queries required.
+
+
+
+
+
+
